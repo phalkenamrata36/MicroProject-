@@ -13,54 +13,90 @@
 
     <!-- CSS inside HTML -->
     <style>
+        /* Body styling */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f0f2f5;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
 
+        /* Card styling */
         .card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #ffffff, #f3f3f3);
+            padding: 50px 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2),
+                        inset 0 -5px 15px rgba(0,0,0,0.05);
             text-align: center;
-            width: 350px;
+            width: 420px;
+            transition: all 0.3s ease;
         }
 
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25),
+                        inset 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Heading */
         h1 {
             margin-bottom: 20px;
-            color: #333;
+            color: #4b0082;
+            font-size: 32px;
+            letter-spacing: 1px;
         }
 
+        /* Message */
         .message {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             color: #555;
+            letter-spacing: 0.5px;
         }
 
+        /* Input box */
         input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            width: 85%;
+            padding: 14px;
+            margin-bottom: 25px;
+            border-radius: 15px;
             border: 1px solid #ccc;
             font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
         }
 
+        input:focus {
+            border: 2px solid #6e8efb;
+            box-shadow: 0 0 12px rgba(110, 142, 251, 0.5);
+        }
+
+        /* Output text */
         .output {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #2c3e50;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #4b0082;
+            transition: all 0.5s ease-in-out;
         }
 
+        /* Footer */
         .footer {
             font-size: 14px;
             color: #888;
+        }
+
+        /* Fade-in for output */
+        .output.ng-hide-remove {
+            opacity: 0;
+        }
+        .output.ng-hide-remove.ng-hide-remove-active {
+            opacity: 1;
         }
     </style>
 
