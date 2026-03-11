@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Stylish Hello App</title>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- Link to external JS file -->
+    <script src="app.js"></script>
+   
+</head>
+
+<body ng-controller="HelloController">
+
+    <div class="card">
+        <h1>🌟 Welcome</h1>
+        <div class="message">{{ message }}</div>
+
+        <input type="text" ng-model="name" placeholder="Enter Your Name">
+
+        <div class="output" ng-show="name">
+            👋 Hello {{ name | uppercase }}
+        </div>
+
+        <div class="footer">
+            Built with AngularJS
+        </div>
+    </div>
+
+</body>
+</html>
